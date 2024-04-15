@@ -17,6 +17,16 @@ def  insert_data(position,friend):
         katok[i-1] = None # 바꾼자리를 None 으로 
     katok[position] = friend #빈 위치에 변수 삽입
     print(katok)
+    
+def delete_data(position):
+    katok[position] = None # 그 자리를 비워주고 
+    for i in range(position+1,len(katok)): #그 다음자리부터, 리스트의 길이까지
+        katok[i-1] = katok[i] # i 위치의 값을 그 앞칸으로 옮기고
+        katok[i] = None # 전칸을 지운다
+    del katok[-1] # 그럼 맨 마지막 자리가 비워지는데 그 자리를 삭제
+    print(katok)
+
+
 
     
     
@@ -36,6 +46,9 @@ add_data('지효')
 
 
 insert_data(3,'모모')
+
+delete_data(2)
+
 
 
 

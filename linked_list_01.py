@@ -34,3 +34,20 @@ node1.link.data
 node1.link.link.data
 node1.link.link.link.data
 node1.link.link.link.link.data
+
+# 많이 쓰이고 중요한 코드 
+# 스스로 짤 수 있어야 한다 
+current = node1
+print(current.data)
+# 마지막이 아니면 == 링크가 비어있지 않으면 
+while current.link != None :
+    current = current.link
+    print(current.data, end=' ')
+
+
+# 그림보고 복습
+current = node1
+print(current.data)
+while current.link != None:
+    current = current.link #그다음 링크로 연결
+    print(current.data,end=' ')
